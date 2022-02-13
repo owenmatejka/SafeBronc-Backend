@@ -11,12 +11,12 @@ const database = require('./functions/generic/database');
 const runAlert = require('./functions/REST/runAlert')
 
 app.get('/ping', function (req, res) {
-    res.json({message: 'Alert sent!' });
+    res.json({message: 'Pong!' });
 })
 
 app.post('/runAlert', function(req, res) {
     runAlert(req.body.name)
-    res.send('good!');
+    res.json({message: 'Alert sent!' });
 })
 
 //app.use('/api');
