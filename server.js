@@ -3,8 +3,17 @@ var app = express();
 
 var database = require('./functions/generic/database');
 
+var createEvent = require('./functions/REST/createEvent')
+
 app.get('/ping', function (req, res) {
     res.send('pong!');
+})
+
+app.post('/createEvent', function (req, res) {
+    var body = req.body
+
+    var eventName = body.eventName
+    var eventLocation = body.eventLocation
 })
 
 var server = app.listen(8081, function() {
