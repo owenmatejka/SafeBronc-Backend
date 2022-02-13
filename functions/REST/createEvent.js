@@ -27,7 +27,9 @@ module.exports = (eventName, eventLocation,PhoneNbrs) => {
     VALUES('${eventId}','${eventName}','${eventLocation}','${dateTime}','${''}')`);
 
     PhoneNbrs.forEach(function(item, index, array) {
-        sql.query(`INSERT INTO safebronc.contacts VALUES('${item[0]}','${item[1]}','${item[2]}','${eventId}', ${'False'})`)
+        if (item[0] !== undefined && item[1] !== undefined && item[2] !== undefined) {
+            sql.query(`INSERT INTO safebronc.contacts VALUES('${item[0]}','${item[2]}','${item[1]}',${eventId}, ${'False'})`)
+        }
       })
     return {}
 }
