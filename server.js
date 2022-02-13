@@ -29,3 +29,10 @@ var server = app.listen(8081, function() {
 var messageSender = require('./functions/generic/messageSender')
 messageSender.send('6178931720', 'test')
 */
+
+var createEvent = require('./functions/REST/createEvent')
+var updateEvent = require('./functions/REST/updateEvent')
+createEvent('test3', '69:430');
+     
+updateEvent(['1234566'],2);
+    
