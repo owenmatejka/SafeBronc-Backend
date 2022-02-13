@@ -19,7 +19,7 @@ app.post('/runAlert', function(req, res) {
     res.send('good!');
 })
 
-app.use('/api', router);
+//app.use('/api');
 
 /*
 app.post('/createEvent', function (req, res) {
@@ -37,13 +37,13 @@ var server = app.listen(8081, function() {
     console.log("SafeBronc REST server listening at http://%s:%s", host, port)
 })
 
-
+/*
 
 var createEvent = require('./functions/REST/createEvent')
 var updateEvent = require('./functions/REST/updateEvent')
 var coordinate;
 createEvent('test3', '69:430',['123s4212566','111111212ss11']); //eventname, coordinate
-     
+  */   
 /*
 var messageSender = require('./functions/generic/messageSender')
 messageSender.send('6178931720', 'test')
