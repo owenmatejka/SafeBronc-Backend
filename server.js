@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var database = require('./functions/generic/database');
+
 app.get('/ping', function (req, res) {
     res.send('pong!');
 })
