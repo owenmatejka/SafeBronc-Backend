@@ -1,9 +1,7 @@
 const sql = require("../generic/database.js");
 //for nbr in phoneNbrs
-module.exports = (PhoneNbrs,eventId) => {
-    for (let i = 0; i < PhoneNbrs.length; i++) {
-        sql.query(`INSERT INTO safebronc.contacts VALUES('${PhoneNbrs[i]}','${'Sun'}','${'Zach'}',${eventId}, ${false})`)
-    }
+module.exports = (PhoneNbr) => {
+    
 }
 
 //    send text
