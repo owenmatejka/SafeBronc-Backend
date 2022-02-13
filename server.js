@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 
 const database = require('./functions/generic/database');
 
-const createEvent = require('./functions/REST/createEvent')
 const runAlert = require('./functions/REST/runAlert')
 
 app.get('/ping', function (req, res) {
