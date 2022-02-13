@@ -9,6 +9,7 @@ module.exports = (eventName, eventLocation, PhoneNbrs) => {
     sql.query(`INSERT INTO events(EventName,Location,ExpireTime,PhoneNbrs) 
     VALUES(${eventName},${eventLocation},${dateTime},${""})`)
     //for nbr in phoneNbrs
+    
     //    send text
     return {}
 }
