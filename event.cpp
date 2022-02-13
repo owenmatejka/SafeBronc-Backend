@@ -2,15 +2,15 @@
 
 Event::Event()
 {
-  name = "";
-  hour = 0;
-  min = 0;
-  location = "";
+  
 }
-Event::Event(string n, int h, int m, string l)
+Event::Event(string name, string location)
 {
-  name = n;
+  /*name = n;
   hour = h;
   min = m;
-  location = l;
+  location = l;*/
+}
+void Event::createEvent(){
+  
 }

@@ -14,6 +14,7 @@ app.post('/createEvent', function (req, res) {
 
     var eventName = body.eventName
     var eventLocation = body.eventLocation
+    
 })
 
 var server = app.listen(8081, function() {

@@ -19,7 +19,5 @@ connection.connect(function(err) {
     console.log("Connected!");
 })
 
-module.exports = () => {
-
-    return
-}
+module.exports = connection;
+   

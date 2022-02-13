@@ -7,9 +7,9 @@ using namespace std;
 class Event{
 public:
     Event();
-    Event(string n, string t, string l);
-    Event(int h, int m); //just to
-    string name() { return name; }
+    Event(string name, string location);
+    
+    /*string name() { return name; }
     string time() { return time; }
     string location() { return location }
     void setName(string n) { name = n; }
@@ -18,8 +18,8 @@ public:
       hour = h;
       min = m;
     }
-    void setLocation(string l) { location = l; }
-
+    void setLocation(string l) { location = l; }*/
+    void createEvent();
 private:
   string name;
   string time;
