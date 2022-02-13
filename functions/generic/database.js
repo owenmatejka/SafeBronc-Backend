@@ -1,7 +1,7 @@
 var mysql = require('mysql2');
 var fs = require('fs');
 
-let rawkeys = fs.readFileSync('keys.json');
+let rawkeys = fs.readFileSync('./keys/database.json');
 let keys = JSON.parse(rawkeys);
 
 var connection = mysql.createConnection({
