@@ -1,13 +1,26 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 
-var database = require('./functions/generic/database');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-var createEvent = require('./functions/REST/createEvent')
+
+const database = require('./functions/generic/database');
+
+const createEvent = require('./functions/REST/createEvent')
+const runAlert = require('./functions/REST/runAlert')
 
 app.get('/ping', function (req, res) {
-    res.send('pong!');
+    res.json({message: 'Alert sent!' });
 })
+
+app.post('/runAlert', function(req, res) {
+    runAlert(req.body.name)
+    res.send('good!');
+})
+
+app.use('/api', router);
 
 /*
 app.post('/createEvent', function (req, res) {
