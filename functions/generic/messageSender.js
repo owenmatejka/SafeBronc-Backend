@@ -1,4 +1,4 @@
-var fs = require('fs');
+/*var fs = require('fs');
 
 let rawkeys = fs.readFileSync('./keys/twilio.json');
 let keys = JSON.parse(rawkeys);
@@ -21,4 +21,4 @@ exports.send = function (to, body) {
 }
 
 
-  console.log("Done!")
+  console.log("Done!")*/
